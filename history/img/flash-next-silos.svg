@@ -55,7 +55,7 @@
 <rect x="576.0" y="869.0" width="88.0" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="620.0" y="884.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">tuned +10%</text>
 <path d="M855.0,1100 L835.0,1100" fill="none" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
 <path d="M705.0,1100 L685.0,1100" fill="none" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
-<rect x="555" y="1013" width="430" height="40" rx="20" fill="#e85d04"/><text x="770" y="1039" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">⚡ One engine fix: +65% on real work</text>
+<rect x="555" y="1013" width="430" height="40" rx="20" fill="#e85d04"/><text x="770" y="1039" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">⚡ One engine fix: +52% on real work</text>
 <path d="M620,1053 L620,1069" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
 <rect x="100.0" y="200" width="140" height="54" rx="12" fill="#e0e7ff"/>
 <text x="170.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#3a0ca3">🎓 ISTA</text>
@@ -112,22 +112,22 @@
 <text x="770.0" y="1096" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">New server</text>
 <text x="770.0" y="1114" text-anchor="middle" font-size="12" fill="#555">ships the fix</text>
 <rect x="555.0" y="424.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
-<rect x="565.0" y="454" width="41.19521912350597" height="10" rx="5" fill="#0077b6"/>
+<rect x="565.0" y="454" width="44.76190476190476" height="10" rx="5" fill="#0077b6"/>
 <text x="620.0" y="444" text-anchor="middle" font-size="16" font-weight="700" fill="#111">9.4 t/s</text>
 <rect x="555.0" y="554.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
-<rect x="565.0" y="584" width="51.27490039840637" height="10" rx="5" fill="#0077b6"/>
+<rect x="565.0" y="584" width="55.71428571428571" height="10" rx="5" fill="#0077b6"/>
 <text x="620.0" y="574" text-anchor="middle" font-size="16" font-weight="700" fill="#111">11.7 t/s</text>
 <rect x="555.0" y="794.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
-<rect x="565.0" y="824" width="60.47808764940239" height="10" rx="5" fill="#0077b6"/>
+<rect x="565.0" y="824" width="65.71428571428571" height="10" rx="5" fill="#0077b6"/>
 <text x="620.0" y="814" text-anchor="middle" font-size="16" font-weight="700" fill="#111">13.8 t/s</text>
 <rect x="555.0" y="914.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
-<rect x="565.0" y="944" width="66.61354581673307" height="10" rx="5" fill="#0077b6"/>
+<rect x="565.0" y="944" width="72.38095238095238" height="10" rx="5" fill="#0077b6"/>
 <text x="620.0" y="934" text-anchor="middle" font-size="16" font-weight="700" fill="#111">15.2 t/s</text>
 <rect x="555.0" y="1069.0" width="130" height="62" rx="10" fill="#fff" stroke="#e85d04" stroke-width="3"/>
 <rect x="565.0" y="1104" width="110.0" height="12" rx="5" fill="#e85d04"/>
-<text x="620.0" y="1094" text-anchor="middle" font-size="20" font-weight="700" fill="#111">25.1 t/s</text>
+<text x="620.0" y="1094" text-anchor="middle" font-size="20" font-weight="700" fill="#111">23.1 t/s</text>
 <rect x="95" y="1172" width="900" height="118" rx="12" fill="#fff8f0" stroke="#e85d04" stroke-opacity="0.5"/>
-<text x="115" y="1200" font-size="14.5" fill="#222">⚡ The biggest jump: one engine fix (Oct 7) took real work from 15.2 to 25.1 t/s, with the same model file.</text>
+<text x="115" y="1200" font-size="14.5" fill="#222">⚡ The biggest jump: one engine fix (Oct 7) took real work from 15.2 to 23.1 t/s, with the same model file.</text>
 <text x="115" y="1226" font-size="14.5" fill="#222">🎓 + 🏎️ The model we run is a team effort: UkisAI's retrained Swift, shrunk with ISTA's recipe.</text>
 <text x="115" y="1252" font-size="14.5" fill="#222">🦥 Unsloth's tricks are why a 176B-parameter model fits in our 64 GB Mac at all.</text>
 <text x="115" y="1278" font-size="12.5" fill="#666">t/s = tokens per second (about ¾ word each): median decode on our real agent work at 64–128k context, from server logs.</text>

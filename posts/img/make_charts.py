@@ -61,5 +61,5 @@ chart("A month of changes, real agent work at 64–128k context",
       "Median decode t/s from server logs, M4 Pro 64 GB; the last step is one llama.cpp upgrade",
       [("Sep 8|AD-4.27, no MTP", [9.4]), ("Sep 20|AD-3.84 + MTP", [11.7]),
        ("Sep 26|Swift, b11139", [13.8]), ("Sep 29|MTP 6/0.8", [15.2]),
-       ("Oct 7|b11443", [25.1])],
+       ("Oct 7|b11443", [23.1])],
       [("decode", BEFORE)], 30, "decode-by-era.svg")

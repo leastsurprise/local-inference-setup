@@ -1,4 +1,4 @@
-**Title:** One llama.cpp upgrade beat a month of tuning: Qwen3.8-Flash-Next on a 64 GB M4 Pro, +65% decode on real work
+**Title:** One llama.cpp upgrade beat a month of tuning: Qwen3.8-Flash-Next on a 64 GB M4 Pro, +52% decode on real work
 
 **Image:** `img/decode-by-era.png` (optionally `img/b11443-ab.png` as a second gallery image)
 
@@ -16,7 +16,7 @@ Follow-up to my Flash-Next on a Mac mini M4 Pro 64 GB post. Over a month I chang
 | 64k | 14.4 → 21.7 (+51%) | 19.6 → 28.4 (+45%) |
 | 120k | 10.6 → 17.9 (+69%) | 16.0 → 26.1 (+63%) |
 
-**On real agent work at 64–128k context** (median from server logs): 9.4 t/s on Sep 8 → 15.2 after three weeks of changes → **25.1** after the upgrade. That's 34 requests so far, so treat it as early; the A/B above is the controlled number.
+**On real agent work at 64–128k context** (median from server logs): 9.4 t/s on Sep 8 → 15.2 after three weeks of changes → **23.1** after the upgrade (173 requests over three days; the A/B above is the controlled number).
 
 What I learned:
 

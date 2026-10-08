@@ -1,10 +1,10 @@
-**One llama.cpp upgrade beat a month of tuning: Qwen3.8-Flash-Next on a 64 GB M4 Pro, +65% decode on real work**
+**One llama.cpp upgrade beat a month of tuning: Qwen3.8-Flash-Next on a 64 GB M4 Pro, +52% decode on real work**
 
 A month ago I posted my [Flash-Next setup on a Mac mini M4 Pro 64 GB](2026-09-swift-m4pro.md). Since then I've changed quants, tuned MTP, tried every other runtime I could find, and upgraded llama.cpp twice. The surprise: **the last upgrade alone added more speed than everything before it combined.**
 
 ![Median decode on real agent work at 64–128k context](img/decode-by-era.png)
 
-**TL;DR:** If you run Flash-Next on Apple Silicon, move to Unsloth's llama.cpp fork **[b11443-mix-d65395f](https://github.com/unslothai/llama.cpp/releases/tag/b11443-mix-d65395f)** or newer. It carries upstream's `qwen4exp` attention-mask fix (#29824). Same model file, same flags: decode **+26% at 16k, +51% at 64k, +69% at 120k context**. On my real agent work at 64–128k, the median went from **15.2 to 25.1 t/s**.
+**TL;DR:** If you run Flash-Next on Apple Silicon, move to Unsloth's llama.cpp fork **[b11443-mix-d65395f](https://github.com/unslothai/llama.cpp/releases/tag/b11443-mix-d65395f)** or newer. It carries upstream's `qwen4exp` attention-mask fix (#29824). Same model file, same flags: decode **+26% at 16k, +51% at 64k, +69% at 120k context**. On my real agent work at 64–128k, the median went from **15.2 to 23.1 t/s**.
 
 ## What changed, and what each change bought
 
@@ -16,11 +16,11 @@ Same measure throughout: median decode (the server's 3-second rate, thinking tok
 | Sep 20 | AtomicChat AD-3.84 IQ4_XS + MTP | 11.7 | 10.2–13.6 | 172 | +24% |
 | Sep 26 | Swift 1.5 GSQ-RCO IQ3_XXS + MTP, fork b11139 | 13.8 | 12.2–15.5 | 158 | +18% |
 | Sep 29 | Same, MTP draft tuned 2/0.0 → 6/0.8 | 15.2 | 12.4–18.6 | 594 | +10% |
-| **Oct 7** | **Same, fork b11443** | **25.1** | **21.2–29.6** | **34** | **+65%** |
+| **Oct 7** | **Same, fork b11443** | **23.1** | **19.6–26.9** | **173** | **+52%** |
 
-Three weeks of changes added 5.8 t/s. One upgrade added 9.9.
+Three weeks of changes added 5.8 t/s. One upgrade added 7.9.
 
-**Caveats:** the work differs from period to period, thinking effort was mixed before Sep 26, and the Oct 7 row has only 34 requests so far (one evening and morning). The controlled A/B below is the cleaner evidence.
+**Caveats:** the work differs from period to period, thinking effort was mixed before Sep 26, and the Oct 7 row covers only three days (173 requests). The controlled A/B below is the cleaner evidence.
 
 ## The controlled A/B
 
@@ -100,4 +100,5 @@ The agent instructions and small tools I use day to day with this setup:
 - [`agents/`](../agents/): the global `AGENTS.md` I give every coding agent (pace, scope, top-down explanations, diagrams), plus PONYTAIL.
 - [`tools/md-table-fit`](../tools/md-table-fit): rewraps over-wide Markdown tables, with `--join` to read them unwrapped.
 - [`tools/md2pdf`](../tools/md2pdf): Markdown to PDF offline, with Mermaid diagrams drawn.
+- [`tools/llama-perf`](../tools/llama-perf): the pi extension that shows live prefill/decode t/s and MTP acceptance as context grows.
 - SQL tools (a SQL Server 2016 query checker and a T-SQL layout formatter) are in a separate repo: [leastsurprise/sql-tools](https://github.com/leastsurprise/sql-tools).

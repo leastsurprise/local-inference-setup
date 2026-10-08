@@ -18,7 +18,7 @@ Chrome screenshot of that SVG, so the emoji render in colour.*
 > 16k, +48% at 64k and +69% at 120k context**: at 120k, 10.6 → 17.9 t/s on
 > reasoning and 16.0 → 26.1 on copy work. That beat MTP itself (+49% at
 > 139k) and every switch to a smaller model (+4–14%). On real agent work at
-> 64–128k context, median decode went from 15.2 to 25.1 t/s (+65%). See
+> 64–128k context, median decode went from 15.2 to 23.1 t/s (+52%). See
 > section 4.
 
 
@@ -292,7 +292,7 @@ xychart-beta
     title "Median decode on real work, 64-128k context (t/s)"
     x-axis ["Sep 8", "Sep 20", "Sep 26", "Sep 29", "Oct 7"]
     y-axis "tokens/s" 0 --> 30
-    bar [9.4, 11.7, 13.8, 15.2, 25.1]
+    bar [9.4, 11.7, 13.8, 15.2, 23.1]
 ```
 
 | Era (logs from) | Setup | Median t/s | Middle 50% | Requests | Step |
@@ -301,16 +301,16 @@ xychart-beta
 | Sep 20–24 | AD-3.84 + MTP, b10840 | 11.7 | 10.2–13.6 | 172 | +24% (MTP, smaller quant) |
 | Sep 26–28 | Swift IQ3_XXS + MTP 2/0, b11139 | 13.8 | 12.2–15.5 | 158 | +18% (new fork, Swift) |
 | Sep 29–Oct 6 | Same, MTP tuned to 6/0.8 | 15.2 | 12.4–18.6 | 594 | +10% (draft tuning) |
-| **Oct 7–8** | **Same, fork b11443** | **25.1** | **21.2–29.6** | **34** | **⚡ +65% (one engine fix)** |
+| **Oct 7–9** | **Same, fork b11443** | **23.1** | **19.6–26.9** | **173** | **⚡ +52% (one engine fix)** |
 
 - **This is the most honest view of the history.** It uses the same
   measure and the same kind of work throughout. Over a month, decode went
-  2.7× faster. The last step alone added more speed than all the earlier
+  2.5× faster. The last step alone added more speed than all the earlier
   ones together: three weeks of changes added 5.8 t/s (9.4 → 15.2), and one
-  upgrade added 9.9 (15.2 → 25.1).
+  upgrade added 7.9 (15.2 → 23.1).
 - **Caveats:** the work differs from era to era (SQL-heavy throughout), and
-  thinking effort was mixed before September 26. The Oct 7 era has only 34
-  requests so far, from one evening and morning. The YaRN-stretched AD-3.84
+  thinking effort was mixed before September 26. The Oct 7 era covers only three
+  days (173 requests). The YaRN-stretched AD-3.84
   run (8.7 t/s) and the Sep 25 AD-4.27 retest on b11139 (9.5 t/s, 34
   requests) are left out as side experiments.
 

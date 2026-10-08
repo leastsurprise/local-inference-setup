@@ -33,7 +33,7 @@ N = {
 # median decode on real agent work at 64-128k context, pooled per era from server logs
 MAC = [("m1", Y["Sep 8"], 9.4, "9.4 t/s"), ("m2", Y["Sep 14"], 11.7, "11.7 t/s"),
        ("m3", Y["Sep 25"], 13.8, "13.8 t/s"), ("m4", Y["Sep 28"], 15.2, "15.2 t/s"),
-       ("m5", Y["Oct 7"], 25.1, "25.1 t/s")]
+       ("m5", Y["Oct 7"], 23.1, "23.1 t/s")]
 for k, y, v, t in MAC:
     N[k] = ("mac", y, t, "", 2 if k == "m5" else 0)
 
@@ -130,7 +130,7 @@ edge(L("srv2"), R("m5"), hot=True)
 
 a('<rect x="555" y="1013" width="430" height="40" rx="20" fill="#e85d04"/>'
   '<text x="770" y="1039" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">'
-  '⚡ One engine fix: +65% on real work</text>')
+  '⚡ One engine fix: +52% on real work</text>')
 a(f'<path d="M620,1053 L620,{1100-31}" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>')
 
 # headers on top of the arrows
@@ -149,7 +149,7 @@ for k, (c, y, l1, l2, emph) in N.items():
         h = 62 if emph else BH
         a(f'<rect x="{x-BW/2}" y="{y-h/2}" width="{BW}" height="{h}" rx="10" fill="#fff" '
           f'stroke="{"#e85d04" if emph else stroke}" stroke-width="{3 if emph else 1.8}"/>')
-        bw = (BW - 20) * v / 25.1
+        bw = (BW - 20) * v / 23.1
         a(f'<rect x="{x-BW/2+10}" y="{y+4}" width="{bw}" height="{12 if emph else 10}" rx="5" '
           f'fill="{"#e85d04" if emph else stroke}"/>')
         a(f'<text x="{x}" y="{y-6}" text-anchor="middle" font-size="{20 if emph else 16}" '
@@ -163,7 +163,7 @@ for k, (c, y, l1, l2, emph) in N.items():
 # footer
 a('<rect x="95" y="1172" width="900" height="118" rx="12" fill="#fff8f0" stroke="#e85d04" stroke-opacity="0.5"/>')
 for i, t in enumerate([
-    "⚡ The biggest jump: one engine fix (Oct 7) took real work from 15.2 to 25.1 t/s, with the same model file.",
+    "⚡ The biggest jump: one engine fix (Oct 7) took real work from 15.2 to 23.1 t/s, with the same model file.",
     "🎓 + 🏎️ The model we run is a team effort: UkisAI's retrained Swift, shrunk with ISTA's recipe.",
     "🦥 Unsloth's tricks are why a 176B-parameter model fits in our 64 GB Mac at all.",
     "t/s = tokens per second (about ¾ word each): median decode on our real agent work at 64–128k context, from server logs.",

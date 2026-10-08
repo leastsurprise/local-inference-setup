@@ -19,7 +19,7 @@ flowchart LR
 | Server | llama.cpp fork **b11443-mix-d65395f** | [unslothai/llama.cpp](https://github.com/unslothai/llama.cpp/releases/tag/b11443-mix-d65395f) |
 | Script | 262k context, MTP 6 / p-min 0.8, optional vision | [`setup/run-swift-mtp.sh`](setup/run-swift-mtp.sh) |
 
-Decode on real agent work at 64–128k context: **~25 t/s median**. Memory: 56.7 GiB wired at idle of a 60 GiB GPU limit; swap stays flat.
+Decode on real agent work at 64–128k context: **~23 t/s median**. Memory: 56.7 GiB wired at idle of a 60 GiB GPU limit; swap stays flat.
 
 ## What's here
 
@@ -29,7 +29,7 @@ Decode on real agent work at 64–128k context: **~25 t/s median**. Memory: 56.7
 | [`history/`](history/flash-next-history.md) | The whole month: who supplies which part (Qwen, AtomicChat, ISTA-DASLab, UkisAI, Unsloth, ggml-org), the timeline, decode by era, quality vs BF16, tried and rejected |
 | [`setup/`](setup/) | The run script, with download commands in its header |
 | [`agents/`](agents/) | My global `AGENTS.md` for coding agents (Claude Code, pi) and the vendored PONYTAIL rules |
-| [`tools/`](tools/) | [`md-table-fit`](tools/md-table-fit): wrap over-wide Markdown tables, `--join` to unwrap · [`md2pdf`](tools/md2pdf): Markdown to PDF offline, Mermaid drawn |
+| [`tools/`](tools/) | [`md-table-fit`](tools/md-table-fit): wrap over-wide Markdown tables, `--join` to unwrap · [`md2pdf`](tools/md2pdf): Markdown to PDF offline, Mermaid drawn · [`llama-perf`](tools/llama-perf): live llama.cpp t/s and MTP stats in pi |
 
 SQL tools (SQL Server 2016 query checker, T-SQL keyword-river formatter) live in [leastsurprise/sql-tools](https://github.com/leastsurprise/sql-tools).
 
