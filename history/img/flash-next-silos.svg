@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1310" width="1000" height="1310" font-family="-apple-system, Helvetica, Arial, sans-serif">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker><marker id="arb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e85d04"/></marker></defs>
+<rect width="1000" height="1310" fill="#ffffff"/>
+<text x="500" y="38" text-anchor="middle" font-size="26" font-weight="700" fill="#111">Who made our Flash-Next fast?</text>
+<text x="500" y="64" text-anchor="middle" font-size="14" fill="#555">Each column is a provider. Time runs down the page. Arrows show who handed what to whom.</text>
+<rect x="95" y="90" width="900" height="92" rx="14" fill="#fde2e4" stroke="#c9184a" stroke-width="2"/>
+<text x="545" y="122" text-anchor="middle" font-size="22" font-weight="700" fill="#c9184a">🧠 QWEN · builds the brain everyone starts from</text>
+<rect x="180.0" y="138" width="280" height="32" rx="16" fill="#fff" stroke="#c9184a"/><text x="320" y="159" text-anchor="middle" font-size="14" fill="#111">Flash-Next 176B (brain)</text>
+<rect x="550.0" y="138" width="140" height="32" rx="16" fill="#fff" stroke="#c9184a"/><text x="620" y="159" text-anchor="middle" font-size="14" fill="#111">Vision (eyes)</text>
+<rect x="700.0" y="138" width="140" height="32" rx="16" fill="#fff" stroke="#c9184a"/><text x="770" y="159" text-anchor="middle" font-size="14" fill="#111">MTP (guesser)</text>
+<rect x="100.0" y="200" width="140" height="950" rx="12" fill="#e0e7ff" stroke="#3a0ca3" stroke-opacity="0.35"/>
+<rect x="250.0" y="200" width="140" height="950" rx="12" fill="#e3f2ec" stroke="#2d6a4f" stroke-opacity="0.35"/>
+<rect x="400.0" y="200" width="140" height="950" rx="12" fill="#fff4cc" stroke="#a07800" stroke-opacity="0.35"/>
+<rect x="550.0" y="200" width="140" height="950" rx="12" fill="#d7f3fb" stroke="#0077b6" stroke-opacity="0.35"/>
+<rect x="700.0" y="200" width="140" height="950" rx="12" fill="#ddf5e0" stroke="#1b4332" stroke-opacity="0.35"/>
+<rect x="850.0" y="200" width="140" height="950" rx="12" fill="#eceef0" stroke="#495057" stroke-opacity="0.35"/>
+<text x="80" y="305" text-anchor="end" font-size="13" fill="#777" font-style="italic">earlier</text>
+<line x1="88" y1="450" x2="992" y2="450" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="455" text-anchor="end" font-size="14" font-weight="600" fill="#333">Sep 8</text>
+<line x1="88" y1="580" x2="992" y2="580" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="585" text-anchor="end" font-size="14" font-weight="600" fill="#333">Sep 14</text>
+<line x1="88" y1="710" x2="992" y2="710" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="715" text-anchor="end" font-size="14" font-weight="600" fill="#333">Sep 24</text>
+<line x1="88" y1="820" x2="992" y2="820" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="825" text-anchor="end" font-size="14" font-weight="600" fill="#333">Sep 25</text>
+<line x1="88" y1="940" x2="992" y2="940" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="945" text-anchor="end" font-size="14" font-weight="600" fill="#333">Sep 28</text>
+<line x1="88" y1="1100" x2="992" y2="1100" stroke="#bbb" stroke-dasharray="3 5"/>
+<text x="80" y="1105" text-anchor="end" font-size="14" font-weight="600" fill="#333">Oct 7</text>
+<line x1="86" y1="270" x2="86" y2="1140" stroke="#999" stroke-width="2" marker-end="url(#ar)"/>
+<path d="M320.0,170 L320.0,424.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="290.8" y="319" width="58.400000000000006" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="320.0" y="334" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">¼ size</text>
+<path d="M300,170 C470.0,170 470.0,170 470.0,684.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="429.7" y="369" width="80.60000000000001" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="470.0" y="384" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">retrained</text>
+<path d="M770.0,170 L770.0,424.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="726.0" y="319" width="88.0" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="770.0" y="334" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">MTP repack</text>
+<path d="M170.0,306.0 L170.0,324.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M170.0,376.0 C170.0,820 170.0,820 405.0,820" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="140.8" y="629" width="58.400000000000006" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="170.0" y="644" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">recipe</text>
+<path d="M470.0,736.0 L470.0,794.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="440.8" y="754.0" width="58.400000000000006" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="470.0" y="769.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">shrunk</text>
+<path d="M320.0,476.0 L320.0,554.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="287.1" y="504.0" width="65.80000000000001" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="320.0" y="519.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">smaller</text>
+<path d="M385.0,450 L555.0,450" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M385.0,580 L555.0,580" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="433.4" y="569.0" width="73.2" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="470.0" y="584.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">+ vision</text>
+<path d="M535.0,820 L555.0,820" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M705.0,450 C695.0,450 695.0,572 685.0,572" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="669.5" y="509" width="51.0" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="695.0" y="524" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">+ MTP</text>
+<path d="M705.0,820 L685.0,820" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M920.0,326.0 C920.0,450 920.0,450 835.0,450" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="898.2" y="379" width="43.6" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="920.0" y="394" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">base</text>
+<path d="M855.0,820 L835.0,820" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<path d="M620.0,846.0 L620.0,914.0" fill="none" stroke="#444" stroke-width="1.6" marker-end="url(#ar)"/>
+<rect x="576.0" y="869.0" width="88.0" height="21" rx="10" fill="#fff" stroke="#333" stroke-width="1"/><text x="620.0" y="884.0" text-anchor="middle" font-size="12.5" font-weight="600" fill="#333">tuned +10%</text>
+<path d="M855.0,1100 L835.0,1100" fill="none" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
+<path d="M705.0,1100 L685.0,1100" fill="none" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
+<rect x="555" y="1013" width="430" height="40" rx="20" fill="#e85d04"/><text x="770" y="1039" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">⚡ One engine fix: +65% on real work</text>
+<path d="M620,1053 L620,1069" stroke="#e85d04" stroke-width="3.5" marker-end="url(#arb)"/>
+<rect x="100.0" y="200" width="140" height="54" rx="12" fill="#e0e7ff"/>
+<text x="170.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#3a0ca3">🎓 ISTA</text>
+<text x="170.0" y="244" text-anchor="middle" font-size="12" fill="#3a0ca3">shrink science</text>
+<rect x="250.0" y="200" width="140" height="54" rx="12" fill="#e3f2ec"/>
+<text x="320.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#2d6a4f">📦 ATOMICCHAT</text>
+<text x="320.0" y="244" text-anchor="middle" font-size="12" fill="#2d6a4f">shrinks the brain</text>
+<rect x="400.0" y="200" width="140" height="54" rx="12" fill="#fff4cc"/>
+<text x="470.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#a07800">🏎️ UKISAI</text>
+<text x="470.0" y="244" text-anchor="middle" font-size="12" fill="#a07800">retrains it</text>
+<rect x="550.0" y="200" width="140" height="54" rx="12" fill="#d7f3fb"/>
+<text x="620.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#0077b6">🖥️ OUR SANDPIT</text>
+<text x="620.0" y="244" text-anchor="middle" font-size="12" fill="#0077b6">speed on real work</text>
+<rect x="700.0" y="200" width="140" height="54" rx="12" fill="#ddf5e0"/>
+<text x="770.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#1b4332">🦥 UNSLOTH</text>
+<text x="770.0" y="244" text-anchor="middle" font-size="12" fill="#1b4332">runs it first</text>
+<rect x="850.0" y="200" width="140" height="54" rx="12" fill="#eceef0"/>
+<text x="920.0" y="226" text-anchor="middle" font-size="15" font-weight="700" fill="#495057">⚙️ LLAMA.CPP</text>
+<text x="920.0" y="244" text-anchor="middle" font-size="12" fill="#495057">the engine</text>
+<rect x="105.0" y="254.0" width="130" height="52" rx="10" fill="#fff" stroke="#3a0ca3" stroke-width="1.8"/>
+<text x="170.0" y="276" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">GSQ</text>
+<text x="170.0" y="294" text-anchor="middle" font-size="12" fill="#555">smart rounding</text>
+<rect x="105.0" y="324.0" width="130" height="52" rx="10" fill="#fff" stroke="#3a0ca3" stroke-width="1.8"/>
+<text x="170.0" y="346" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">RCO</text>
+<text x="170.0" y="364" text-anchor="middle" font-size="12" fill="#555">bit budget</text>
+<rect x="255.0" y="424.0" width="130" height="52" rx="10" fill="#fff" stroke="#2d6a4f" stroke-width="1.8"/>
+<text x="320.0" y="446" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">4.27-bit</text>
+<text x="320.0" y="464" text-anchor="middle" font-size="12" fill="#555">big, tight fit</text>
+<rect x="255.0" y="554.0" width="130" height="52" rx="10" fill="#fff" stroke="#2d6a4f" stroke-width="1.8"/>
+<text x="320.0" y="576" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">3.84-bit</text>
+<text x="320.0" y="594" text-anchor="middle" font-size="12" fill="#555">room for extras</text>
+<rect x="405.0" y="684.0" width="130" height="52" rx="10" fill="#fff" stroke="#a07800" stroke-width="1.8"/>
+<text x="470.0" y="706" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Swift</text>
+<text x="470.0" y="724" text-anchor="middle" font-size="12" fill="#555">thinks 56% less</text>
+<rect x="405.0" y="794.0" width="130" height="52" rx="10" fill="#fff" stroke="#e85d04" stroke-width="3"/>
+<text x="470.0" y="816" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Swift 3-bit</text>
+<text x="470.0" y="834" text-anchor="middle" font-size="12" fill="#555">same answers</text>
+<rect x="855.0" y="274.0" width="130" height="52" rx="10" fill="#fff" stroke="#495057" stroke-width="1.8"/>
+<text x="920.0" y="296" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Engine</text>
+<text x="920.0" y="314" text-anchor="middle" font-size="12" fill="#555">runs on Mac</text>
+<rect x="855.0" y="794.0" width="130" height="52" rx="10" fill="#fff" stroke="#495057" stroke-width="1.8"/>
+<text x="920.0" y="816" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Mac tuning</text>
+<text x="920.0" y="834" text-anchor="middle" font-size="12" fill="#555">+15% speed</text>
+<rect x="855.0" y="1074.0" width="130" height="52" rx="10" fill="#fff" stroke="#e85d04" stroke-width="3"/>
+<text x="920.0" y="1096" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Long-text fix</text>
+<text x="920.0" y="1114" text-anchor="middle" font-size="12" fill="#555">+69% long</text>
+<rect x="705.0" y="424.0" width="130" height="52" rx="10" fill="#fff" stroke="#1b4332" stroke-width="1.8"/>
+<text x="770.0" y="446" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Server + MTP</text>
+<text x="770.0" y="464" text-anchor="middle" font-size="12" fill="#555">first to run it</text>
+<rect x="705.0" y="794.0" width="130" height="52" rx="10" fill="#fff" stroke="#1b4332" stroke-width="1.8"/>
+<text x="770.0" y="816" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">Fit tricks</text>
+<text x="770.0" y="834" text-anchor="middle" font-size="12" fill="#555">makes it fit</text>
+<rect x="705.0" y="1074.0" width="130" height="52" rx="10" fill="#fff" stroke="#e85d04" stroke-width="3"/>
+<text x="770.0" y="1096" text-anchor="middle" font-size="14.5" font-weight="700" fill="#111">New server</text>
+<text x="770.0" y="1114" text-anchor="middle" font-size="12" fill="#555">ships the fix</text>
+<rect x="555.0" y="424.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
+<rect x="565.0" y="454" width="41.19521912350597" height="10" rx="5" fill="#0077b6"/>
+<text x="620.0" y="444" text-anchor="middle" font-size="16" font-weight="700" fill="#111">9.4 t/s</text>
+<rect x="555.0" y="554.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
+<rect x="565.0" y="584" width="51.27490039840637" height="10" rx="5" fill="#0077b6"/>
+<text x="620.0" y="574" text-anchor="middle" font-size="16" font-weight="700" fill="#111">11.7 t/s</text>
+<rect x="555.0" y="794.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
+<rect x="565.0" y="824" width="60.47808764940239" height="10" rx="5" fill="#0077b6"/>
+<text x="620.0" y="814" text-anchor="middle" font-size="16" font-weight="700" fill="#111">13.8 t/s</text>
+<rect x="555.0" y="914.0" width="130" height="52" rx="10" fill="#fff" stroke="#0077b6" stroke-width="1.8"/>
+<rect x="565.0" y="944" width="66.61354581673307" height="10" rx="5" fill="#0077b6"/>
+<text x="620.0" y="934" text-anchor="middle" font-size="16" font-weight="700" fill="#111">15.2 t/s</text>
+<rect x="555.0" y="1069.0" width="130" height="62" rx="10" fill="#fff" stroke="#e85d04" stroke-width="3"/>
+<rect x="565.0" y="1104" width="110.0" height="12" rx="5" fill="#e85d04"/>
+<text x="620.0" y="1094" text-anchor="middle" font-size="20" font-weight="700" fill="#111">25.1 t/s</text>
+<rect x="95" y="1172" width="900" height="118" rx="12" fill="#fff8f0" stroke="#e85d04" stroke-opacity="0.5"/>
+<text x="115" y="1200" font-size="14.5" fill="#222">⚡ The biggest jump: one engine fix (Oct 7) took real work from 15.2 to 25.1 t/s, with the same model file.</text>
+<text x="115" y="1226" font-size="14.5" fill="#222">🎓 + 🏎️ The model we run is a team effort: UkisAI's retrained Swift, shrunk with ISTA's recipe.</text>
+<text x="115" y="1252" font-size="14.5" fill="#222">🦥 Unsloth's tricks are why a 176B-parameter model fits in our 64 GB Mac at all.</text>
+<text x="115" y="1278" font-size="12.5" fill="#666">t/s = tokens per second (about ¾ word each): median decode on our real agent work at 64–128k context, from server logs.</text>
+</svg>

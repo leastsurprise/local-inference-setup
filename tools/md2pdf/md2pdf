@@ -1,0 +1,121 @@
+#!/bin/sh
+# md2pdf FILE.md... -> FILE.pdf beside each source, mermaid blocks drawn as diagrams.
+# Offline: mmdc turns each ```mermaid block into an SVG, pandoc builds one
+# self-contained HTML page (YAML front matter is read as metadata, not printed),
+# and headless Chrome prints it to PDF. If a table fitter is found
+# (tools/md-table-fit/md_table_fit.py in an ancestor dir, or ../md-table-fit
+# beside this script), wrapped table rows are rejoined first.
+#
+# Needs: mmdc (npm i -g @mermaid-js/mermaid-cli), pandoc, python3 (optional,
+# for the table fitter) and a headless Chrome. Chrome is found from
+# $MD2PDF_CHROME, else the newest chrome-headless-shell that puppeteer fetched
+# for mmdc under ~/.cache/puppeteer, else chromium / google-chrome on PATH,
+# else the macOS Google Chrome app. Code blocks too wide for the page are shrunk to fit (min 5pt),
+# and a diagram that prints larger in landscape gets a landscape page.
+set -eu
+[ $# -gt 0 ] || { echo "usage: md2pdf FILE.md..." >&2; exit 2; }
+find_chrome() {
+  [ -n "${MD2PDF_CHROME:-}" ] && { echo "$MD2PDF_CHROME"; return; }
+  c=$(find "$HOME/.cache/puppeteer" -name chrome-headless-shell -type f -perm -u+x 2>/dev/null | sort | tail -1)
+  [ -n "$c" ] && { echo "$c"; return; }
+  for c in chromium chromium-browser google-chrome google-chrome-stable; do
+    command -v "$c" >/dev/null 2>&1 && { command -v "$c"; return; }
+  done
+  c="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+  [ -x "$c" ] && { echo "$c"; return; }
+}
+chrome=$(find_chrome)
+[ -n "$chrome" ] || { echo "md2pdf: no headless Chrome found; set MD2PDF_CHROME" >&2; exit 2; }
+here=$(cd "$(dirname "$0")" && pwd)
+status=0
+for src in "$@"; do
+  case "$src" in *.md) ;; *) echo "md2pdf: skip $src (not .md)" >&2; status=1; continue ;; esac
+  [ -f "$src" ] || { echo "md2pdf: no such file: $src" >&2; status=1; continue; }
+  dir=$(cd "$(dirname "$src")" && pwd); base=$(basename "$src" .md)
+  out="$dir/$base.pdf"
+  rm -f "$out"; tmp=$(mktemp -d)
+  fitter=""; d="$dir"
+  while :; do
+    [ -f "$d/tools/md-table-fit/md_table_fit.py" ] && { fitter="$d/tools/md-table-fit/md_table_fit.py"; break; }
+    [ "$d" = / ] && break; d=$(dirname "$d")
+  done
+  [ -z "$fitter" ] && [ -f "$here/../md-table-fit/md_table_fit.py" ] && fitter="$here/../md-table-fit/md_table_fit.py"
+  if [ -n "$fitter" ] && python3 "$fitter" --join "$src" > "$tmp/in.md" 2>/dev/null && [ -s "$tmp/in.md" ]; then :
+  else cp "$src" "$tmp/in.md"; fi
+  if grep -q '^ *```mermaid' "$tmp/in.md"; then
+    mmdc -q -i "$tmp/in.md" -o "$tmp/$base.md" -e svg >/dev/null || { echo "md2pdf: mermaid failed in $src" >&2; status=1; rm -rf "$tmp"; continue; }
+  else
+    mv "$tmp/in.md" "$tmp/$base.md"
+  fi
+  # 495pt = A4 text width less pre padding; 0.602em = DejaVu Sans Mono advance.
+  cat > "$tmp/fit.lua" <<'LUA'
+function CodeBlock(el)
+  local n = 0
+  for line in (el.text .. "\n"):gmatch("(.-)\n") do
+    local l = utf8.len(line) or #line
+    if l > n then n = l end
+  end
+  local pt = 495 / (0.602 * n)
+  if pt < 9 then
+    el.attributes.style = pt >= 5 and string.format("--fs:%.2fpt;--ws:pre", pt) or "--fs:5pt"
+  end
+  return el
+end
+-- A relative link has nothing to point at inside a PDF (Chrome would print it
+-- as a file:// URL into the temp dir), so keep its text and drop the link.
+function Link(el)
+  if el.target:match("^%a[%w+.-]*:") or el.target:match("^#") then return nil end
+  return el.content
+end
+-- A diagram that would print larger on a landscape page gets one of its own.
+-- Sizes in mm: mmdc's viewBox is CSS px (0.2646 mm); A4 text area 180x250
+-- portrait, 267x170 landscape (less 15mm margins and a little headroom).
+function Para(el)
+  if #el.content ~= 1 or el.content[1].t ~= "Image" then return nil end
+  local src = el.content[1].src:gsub("^%./", "")
+  if not src:match("%.svg$") then return nil end
+  local f = io.open(os.getenv("MD2PDF_TMP") .. "/" .. src, "r")
+  if not f then return nil end
+  local head = f:read(4096); f:close()
+  local w, h = head:match('viewBox="[-%d.]+%s+[-%d.]+%s+([%d.]+)%s+([%d.]+)"')
+  w, h = tonumber(w), tonumber(h)
+  if not w or w <= 0 or h <= 0 then return nil end
+  w, h = w * 0.2646, h * 0.2646
+  if math.min(267 / w, 170 / h) > 1.25 * math.min(180 / w, 250 / h) then
+    return pandoc.Div({el}, pandoc.Attr("", {"wide"}))
+  end
+end
+LUA
+  cat > "$tmp/t.html" <<'TPL'
+<!doctype html><html><head><meta charset="utf-8"><title>$pagetitle$</title><style>
+@page { size: A4; margin: 15mm }
+body { font: 10.5pt/1.45 "Liberation Sans", "Noto Sans", sans-serif; color: #111 }
+h1, h2, h3 { line-height: 1.2; page-break-after: avoid }
+pre, code { font-family: "DejaVu Sans Mono", "Liberation Mono", monospace; background: #f4f4f4 }
+code { font-size: 9pt }
+pre { font-size: var(--fs, 9pt); white-space: var(--ws, pre-wrap); word-break: break-word; padding: 6px 8px; line-height: 1.25 }
+pre code { font-size: inherit }
+table { border-collapse: collapse; font-size: 9pt; margin: 8px 0; max-width: 100% }
+th, td { border: 1px solid #bbb; padding: 3px 6px; vertical-align: top; overflow-wrap: anywhere }
+td code { font-size: 8pt }
+th { background: #eee }
+img { max-width: 100%; display: block; margin: 8px auto; page-break-inside: avoid }
+@page wide { size: A4 landscape }
+div.wide { page: wide }
+div.wide img { max-height: 170mm; margin: 0 auto }
+blockquote { border-left: 3px solid #ccc; margin-left: 0; padding-left: 10px; color: #444 }
+</style></head><body>
+$body$
+</body></html>
+TPL
+  MD2PDF_TMP="$tmp" pandoc "$tmp/$base.md" -f markdown-implicit_figures -t html5 --template "$tmp/t.html" \
+    --lua-filter "$tmp/fit.lua" --no-highlight \
+    --metadata pagetitle="$base" --self-contained --resource-path "$tmp:$dir" \
+    -o "$tmp/$base.html" 2>"$tmp/pandoc.err" || { cat "$tmp/pandoc.err" >&2; status=1; rm -rf "$tmp"; continue; }
+  "$chrome" --headless --no-sandbox --disable-gpu --disable-dev-shm-usage \
+    --no-pdf-header-footer --print-to-pdf-no-header --print-to-pdf="$out" \
+    "file://$tmp/$base.html" >/dev/null 2>&1 || true
+  rm -rf "$tmp"
+  if [ -s "$out" ]; then echo "$out"; else echo "md2pdf: Chrome wrote no PDF for $src" >&2; status=1; fi
+done
+exit $status

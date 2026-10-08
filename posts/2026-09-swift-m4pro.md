@@ -1,3 +1,5 @@
+> **Superseded (October 2026).** This setup used llama.cpp fork b11139. Fork **b11443** decodes 26–69% faster with the same model and flags; see [the follow-up post](2026-10-one-upgrade.md) and [`setup/run-swift-mtp.sh`](../setup/run-swift-mtp.sh). Kept as written, for the record.
+
 **Qwen3.8-Flash-Next (Swift 1.5) on a Mac mini M4 Pro 64 GB: what actually works (llama.cpp, MTP, lots of numbers)**
 
 I've spent a week getting [Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next) (the 512-expert MoE) usable on a 64 GB M4 Pro mini (macOS 26.6.2). TL;DR: use UkisAI's Swift 1.5 in GSQ-RCO IQ3_XXS with the MTP head, set the draft to n-max 6 / p-min 0.8, and keep your context small.
@@ -29,7 +31,7 @@ llama-server -m Swift-Qwen3.8-Flash-Next-GSQ-RCO-IQ3_XXS-00001-of-00002.gguf \
 
 **Every request here ran at `reasoning_effort` xhigh** with a 32k thinking budget. The pi sessions were set to xhigh (their session files confirm it, with no changes mid-session), and xhigh is also the server default.
 
-![Prefill, decode and MTP acceptance vs context](swift-speed-vs-context.png)
+![Prefill, decode and MTP acceptance vs context](img/swift-speed-vs-context.png)
 
 Medians from the server logs. Decode uses 3-second windows (3,729 samples) and includes thinking tokens. Prefill uses ~2k-token chunks. Context is the true KV position, reused cache included. MTP acceptance is per request, shown as the median with the middle 50% in brackets.
 

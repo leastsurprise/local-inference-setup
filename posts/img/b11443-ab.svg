@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+<rect width="900" height="500" fill="#fcfcfb"/>
+<text x="70" y="34" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="600">One llama.cpp upgrade: +26% to +69% decode</text>
+<text x="70" y="58" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#52514e" text-anchor="start" font-weight="normal">Swift IQ3_XXS + MTP 6/0.8 on an M4 Pro 64 GB; same model file and prompts, reasoning task</text>
+<line x1="70" x2="870" y1="430.0" y2="430.0" stroke="#e4e3df"/>
+<text x="60" y="435.0" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">0</text>
+<line x1="70" x2="870" y1="373.3333333333333" y2="373.3333333333333" stroke="#e4e3df"/>
+<text x="60" y="378.3333333333333" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">5</text>
+<line x1="70" x2="870" y1="316.6666666666667" y2="316.6666666666667" stroke="#e4e3df"/>
+<text x="60" y="321.6666666666667" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">10</text>
+<line x1="70" x2="870" y1="260.0" y2="260.0" stroke="#e4e3df"/>
+<text x="60" y="265.0" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">15</text>
+<line x1="70" x2="870" y1="203.33333333333334" y2="203.33333333333334" stroke="#e4e3df"/>
+<text x="60" y="208.33333333333334" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">20</text>
+<line x1="70" x2="870" y1="146.66666666666663" y2="146.66666666666663" stroke="#e4e3df"/>
+<text x="60" y="151.66666666666663" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">25</text>
+<line x1="70" x2="870" y1="90.0" y2="90.0" stroke="#e4e3df"/>
+<text x="60" y="95.0" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">30</text>
+<text transform="rotate(-90 18 260.0)" x="18" y="260.0" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">tokens/s</text>
+<path d="M132.33333333333334,430.0 v-210.2 q0,-4 4,-4 h62 q4,0 4,4 v210.2 z" fill="#9a9993"/>
+<text x="167.33333333333334" y="207.8" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">18.9</text>
+<path d="M204.33333333333334,430.0 v-265.73333333333335 q0,-4 4,-4 h62 q4,0 4,4 v265.73333333333335 z" fill="#2a78d6"/>
+<text x="239.33333333333334" y="152.26666666666665" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">23.8</text>
+<text x="203.33333333333334" y="452" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="normal">16k context</text>
+<text x="203.33333333333334" y="469" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">+26%</text>
+<path d="M399.0,430.0 v-159.20000000000005 q0,-4 4,-4 h62 q4,0 4,4 v159.20000000000005 z" fill="#9a9993"/>
+<text x="434.0" y="258.79999999999995" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">14.4</text>
+<path d="M471.0,430.0 v-241.9333333333333 q0,-4 4,-4 h62 q4,0 4,4 v241.9333333333333 z" fill="#2a78d6"/>
+<text x="506.0" y="176.0666666666667" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">21.7</text>
+<text x="470.0" y="452" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="normal">64k context</text>
+<text x="470.0" y="469" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">+51%</text>
+<path d="M665.6666666666667,430.0 v-116.13333333333333 q0,-4 4,-4 h62 q4,0 4,4 v116.13333333333333 z" fill="#9a9993"/>
+<text x="700.6666666666667" y="301.8666666666667" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">10.6</text>
+<path d="M737.6666666666667,430.0 v-198.86666666666665 q0,-4 4,-4 h62 q4,0 4,4 v198.86666666666665 z" fill="#2a78d6"/>
+<text x="772.6666666666667" y="219.13333333333335" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="600">17.9</text>
+<text x="736.6666666666667" y="452" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="normal">120k context</text>
+<text x="736.6666666666667" y="469" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#52514e" text-anchor="middle" font-weight="normal">+69%</text>
+<rect x="610" y="28" width="14" height="14" rx="3" fill="#9a9993"/>
+<text x="630" y="40" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="normal">b11139</text>
+<rect x="740" y="28" width="14" height="14" rx="3" fill="#2a78d6"/>
+<text x="760" y="40" font-family="-apple-system, Helvetica, Arial, sans-serif" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="normal">b11443</text>
+</svg>
